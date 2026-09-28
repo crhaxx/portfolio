@@ -1,91 +1,162 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="cs">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My portfolio</title>
+    <meta name="color-scheme" content="light">
+    <meta name="theme-color" content="#f3f6f9">
+    <title>Nikola Crhák — Backend a mobilní aplikace</title>
+    <meta name="description" content="Portfolio Nikoly Crháka. Backend, mobilní aplikace a nasazení — Dibsido, Weply.cz a NCCore. Brno, hybrid i remote.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,560;12..96,700;12..96,800&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <script src="https://kit.fontawesome.com/48e18bbb43.js" crossorigin="anonymous"></script>
+    <script>document.documentElement.classList.add("js");</script>
 </head>
 <body>
-    <div id="header">
-        <div class="container">
-            <nav>
-                <img src="img/crhaxx.dev.png" alt="" class="logo">
-                <ul id="sidemenu">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#about">Projects</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                    <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
-                </ul>
-                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+    <a class="skip-link" href="#main">Přeskočit na obsah</a>
+    <header class="nav">
+        <div class="shell nav-inner">
+            <div class="nav-bar">
+                <a class="nav-logo" href="#top">Nikola Crhák<span class="tld">.cz</span></a>
+                <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Otevřít menu">
+                    <span data-label>Menu</span>
+                </button>
+            </div>
+            <nav class="nav-links" id="site-nav" aria-label="Navigace">
+                <a href="#top" aria-current="page">Domů</a>
+                <a href="#o-mne">O mně</a>
+                <a href="#projekty">Projekty</a>
+                <a href="#kontakt">Kontakt</a>
+                <p class="nav-note">Brno, Česká republika — hybrid i remote</p>
             </nav>
-            <div class="header-text">
-                <p id="job">Developer</p>
-                <h1>Hi, I'm <span>Nikola Crhák</span><br>From Czech Republic</h1>
-            </div>
         </div>
-    </div>
+    </header>
 
-    <!--about-->
-    <div id="about">
-        <div class="container">
-            <div class="row">
-                <div class="about-col-1">
-                    <img src="/img/crhaxx.jpg" alt="">
-                </div>
-                <div class="about-col-2">
-                    <h1 class="sub-title">About Me</h1>
-                    <p>Hi, I'm <span>Nikola Crhák</span><br>From Czech RepublicHi, I'm <span>Nikola Crhák</span><br>From Czech RepublicHi, I'm <span>Nikola Crhák</span><br>From Czech Republic</p>
-
-                    <div class="tab-titles">
-                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
-                        <p class="tab-links" onclick="opentab('projects')">Projects</p>
+    <div id="page">
+        <main id="main">
+            <section class="hero" id="top">
+                <div class="shell hero-grid">
+                    <div class="about-copy">
+                        <p class="eyebrow"><span class="dot" aria-hidden="true"></span> Crhaxx</p>
+                        <h1>Nikola Crhák</h1>
+                        <p class="sub">Backend a mobilní aplikace. Od kódu až po nasazení.</p>
+                        <p class="location">Brno, Česká republika — dostupné pro hybrid i remote</p>
+                        <p>Jsem <strong>student a vývojář</strong>. Baví mě propojovat <span class="hi">software s infrastrukturou</span>: jak aplikace <strong>funguje</strong> a jak ji <strong>dostat do provozu</strong>. Pracuju v <span class="hi">Dibsido</span> a jsem spoluzakladatel <span class="hi">Weply.cz</span>.</p>
+                        <p>Nejlíp se učím na reálných problémech. Když se rozbije <span class="hi">databáze</span> nebo <span class="hi">konfigurace</span>, chci přijít na to, proč.</p>
+                        <div class="hero-actions">
+                            <a class="btn-fill" href="#projekty">Projekty</a>
+                            <a class="btn-outline" href="mailto:nikola.crhak@gmail.com">Napsat e-mail</a>
+                        </div>
                     </div>
-                    <div class="tab-contents active-tab" id="skills">
-                        <ul>
-                            <li><span>Web Development</span><br>Web app Development</li>
-                            <li><span>Game Development</span><br>Building Android/IOS/Windows games</li>
+                    <aside class="status-panel" aria-label="Aktuálně">
+                        <p class="panel-kicker">Právě teď</p>
+                        <ul class="now-list">
+                            <li>
+                                <span class="name">Dibsido</span>
+                                <span class="role">Backend vývojář</span>
+                            </li>
+                            <li>
+                                <span class="name">Ctrl Europe</span>
+                                <span class="role">Technik a vedoucí vývoje</span>
+                            </li>
+                            <li>
+                                <span class="name">SŠ Čichnova</span>
+                                <span class="role">Informační technologie</span>
+                            </li>
                         </ul>
-                    </div>
-                    <div class="tab-contents" id="projects">
-                        <ul>
-                            <li><span>Shop of Violence Mobile</span><br>Mobile version of Shop of Violence.<br>A horror game inside the shop.<br>Escape or die!</li>
-                            <li><span>Shop of Violence PC</span><br>Windows version of Shop of Violence.<br>A horror game inside the shop.<br>Escape or die!</li>
-                        </ul>
-                    </div>
-                    </div>
+                        <p class="status-meta">Beru občasnou spolupráci na vývoji, datech a infrastruktuře.</p>
+                    </aside>
                 </div>
-            </div>
-        </div>
-    </div>
+            </section>
 
-     <!--contact-->
-    <div id="contact">
-        <div class="container">
-            <div class="row">
-                <div class="contact-left">
-                    <h1 class="sub-title">Contact Me</h1>
-                    <p><i class="fa-solid fa-paper-plane"></i> sqmeditor@gmail.com</p>
-                    <div class="social-icons">
-                        <a href="https://www.instagram.com/crhaxx_mtb/"><i class="fa-brands fa-instagram"></i></a>
-                        <a href="https://discord.com/users/790862986813898782"><i class="fa-brands fa-discord"></i></a>
+            <section class="section" id="o-mne">
+                <div class="shell about-layout">
+                    <div class="section-head">
+                        <h2>O mně</h2>
+                        <p>Student informačních technologií v Brně. Stavím backend, nasazení a věci, které mají vydržet v provozu.</p>
+                    </div>
+                    <div class="about-grid">
+                        <article>
+                            <h3>Dibsido</h3>
+                            <p class="meta">Backend vývojář · od března 2026</p>
+                            <p>Stavím backendovou architekturu produktu a nasazuju služby tak, aby šly udržovat v provozu.</p>
+                        </article>
+                        <article>
+                            <h3>Ctrl Europe</h3>
+                            <p class="meta">Technik a vedoucí vývoje</p>
+                            <p>Správa portálu spolku, databáze a backend na Supabase, technické zázemí webu.</p>
+                        </article>
+                        <article>
+                            <h3>Vzdělání</h3>
+                            <p class="meta">SŠ Čichnova, Brno</p>
+                            <p>Informační technologie — sítě, operační systémy a programování.</p>
+                        </article>
                     </div>
                 </div>
-                <div class="contact-right">
-                    <form name="submit-to-google-sheet">
-                        <input type="text" name="Name" placeholder="Your Name" required>
-                        <input type="email" name="Email" placeholder="Your Email" required>
-                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
-                        <button type="submit" class="btn btn2">Submit</button>
-                    </form>
-                    <span id="msg"></span>
+            </section>
+
+            <section class="section" id="projekty">
+                <div class="shell">
+                    <div class="section-head">
+                        <h2>Vybrané projekty</h2>
+                        <p>Firemní AI, technické zázemí spolku a weby na zakázku.</p>
+                    </div>
+                    <div class="project-grid">
+                        <article class="card">
+                            <p class="status-dot">Živě</p>
+                            <h3>NCCore</h3>
+                            <p>Firemní AI nad dokumenty, fakturami a databázemi — od analýzy po nasazení v izolovaném prostředí.</p>
+                            <ul class="tags">
+                                <li>AI</li>
+                                <li>Backend</li>
+                                <li>SaaS</li>
+                            </ul>
+                            <a class="text-link" href="https://www.nccore.cz/" target="_blank" rel="noopener noreferrer">Otevřít web</a>
+                        </article>
+                        <article class="card">
+                            <p class="status-dot">Živě</p>
+                            <h3>CTRL Europe</h3>
+                            <p>Technické zázemí studentského spolku — Supabase, backend služeb a správa webu.</p>
+                            <ul class="tags">
+                                <li>Supabase</li>
+                                <li>Správa IT</li>
+                            </ul>
+                            <a class="text-link" href="https://ctrleurope.com" target="_blank" rel="noopener noreferrer">Otevřít web</a>
+                        </article>
+                        <article class="card">
+                            <p class="status-dot">Živě</p>
+                            <h3>Weply.cz</h3>
+                            <p>Spoluzakladatel — weby na zakázku od komunikace přes návrh až po nasazení.</p>
+                            <ul class="tags">
+                                <li>Frontend</li>
+                                <li>Webdesign</li>
+                            </ul>
+                            <a class="text-link" href="https://weply.cz" target="_blank" rel="noopener noreferrer">Otevřít web</a>
+                        </article>
+                    </div>
                 </div>
-            </div>
-        </div>
-        <div class="copyright">
-            <p>Copyright ©️ crhaxx 2024</p>
-        </div>
+            </section>
+
+            <section class="section" id="kontakt">
+                <div class="shell">
+                    <div class="section-head">
+                        <h2>Kontakt</h2>
+                        <p>Aktuálně nehledám trvalé zaměstnání, ale rád se zapojím do zajímavých open-source nebo komerčních projektů na občasnou spolupráci. Potřebuješ pomoct s vývojem, databází nebo IT infrastrukturou?</p>
+                    </div>
+                    <div class="contact-actions">
+                        <a class="contact-btn" href="mailto:nikola.crhak@gmail.com">Napiš e-mail</a>
+                        <a class="contact-btn" href="https://github.com/crhaxx" target="_blank" rel="noopener noreferrer">GitHub</a>
+                        <a class="contact-btn" href="https://www.linkedin.com/in/nikola-crh%C3%A1k-246877420" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                        <a class="contact-btn" href="https://www.instagram.com/nikola.crhak" target="_blank" rel="noopener noreferrer">Instagram</a>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer class="footer shell">
+            <span>© 2026 Nikola Crhák</span>
+            <span>Backend · Mobile · Development</span>
+        </footer>
     </div>
     <script src="script.js"></script>
 </body>
